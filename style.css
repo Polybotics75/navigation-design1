@@ -1,0 +1,179 @@
+/*----GENERAL STYLE--*/
+:root{
+    --white: #F5F5F5;
+    --black: #212121;
+    --lwhite: #E5E5E5;
+    --dpale: #A3A3A3;
+    --primary: #7E06F6;
+}
+
+*,
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    background: var(--lwhite);
+    font-family: arial, sans-serif;
+    font-weight: 600;
+}
+
+.fw{
+    width: 100%;
+}
+
+.fh{
+    height: 100%;
+}
+
+.phone{
+    max-width: 360px;
+    max-height: 720px;
+    padding: 15px;
+    border-radius: 20px;
+    background: linear-gradient( var(--dpale), var(--black));
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+
+.display{
+    height: calc(100% - 3.5rem);
+    background: var(--lwhite);
+    border-radius: 10px 10px 0 0;
+}
+
+nav{
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    background: var(--white);
+}
+.nav-tab{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex-direction: column;
+}
+.nav-icon{
+    font-size: 18px;
+}
+.nav-title{
+    font-size: 12px;
+    text-align: center;
+}
+
+
+
+
+/*--NAV 1--*/
+.nav1{
+    gap: 10px;
+}
+.nav1 .nav-tab{
+    width: calc((100% - (4*10px))/5);
+    color: var(--dpale);
+}
+.nav1 .nav-tab.active{
+    background: var(--primary);
+    color: var(--white);
+}
+
+
+
+
+
+/*--NAV 2--*/
+.nav2{
+    gap: 10px;
+}
+.nav2 .nav-tab{
+    width: calc((100% - (3*10px))/4);
+    color: var(--dpale);
+}
+.nav2 .nav-tab.active{
+    color: var(--primary);
+}
+
+
+
+
+/*--NAV 3--*/
+.nav3{
+    gap: 10px;
+}
+.nav3 .nav-tab{
+    width: calc((100% - (4*10px))/5);
+    color: var(--dpale);
+}
+.nav3 .nav-tab.active{
+    border-top: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+
+
+
+/*--NAV 4--*/
+.nav4{
+    gap: 10px;
+}
+.nav4 .nav-tab{
+    width: calc((100% - (3*10px))/4);
+    color: var(--dpale);
+}
+.nav4 .nav-tab.active{
+    color: var(--primary);
+    overflow: hidden;
+    position: relative;
+}
+.nav4 .nav-tab.active::before{
+    content: " ";
+    width: 10px;
+    height: 10px;
+    rotate: 45deg;
+    border-radius: 2px;
+    background: var(--primary);
+    position: absolute;
+    left: -5px;
+    top: 1rem;
+}
+.nav4 .nav-tab.active::after{
+    content: " ";
+    width: 10px;
+    height: 10px;
+    rotate: 45deg;
+    border-radius: 2px;
+    background: var(--primary);
+    position: absolute;
+    right: -5px;
+    top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 450px){
+    body{
+        padding: 10px 5px;
+    }
+}
